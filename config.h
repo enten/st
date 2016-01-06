@@ -8,6 +8,8 @@
 static char font[] = "Source Code Pro:pixelsize=24:antialias=true:autohint=true";
 static int borderpx = 2;
 
+#define histsize 2000
+
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -142,11 +144,11 @@ static MouseShortcut mshortcuts[] = {
     { Button5,              XK_NO_MOD,      "\005" },
 };
 
-+static MouseKey mkeys[] = {
+static MouseKey mkeys[] = {
    /* button               mask            function        argument */
    { Button4,              ShiftMask,      kscrollup,      {.i =  1} },
    { Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
- };
+};
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
